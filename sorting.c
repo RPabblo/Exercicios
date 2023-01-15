@@ -221,12 +221,10 @@ depois, troca esq com o pivo e chama o quicksort nas particoes   */
 int particiona(int *array, int inicio, int final)
 {
     if(final <= inicio) return - 200;
-    int esq, dir, pivo = final;
+    int esq = inicio, dir = final - 1, pivo = final;
 
     for(;;)
     {
-        esq = inicio, dir = final - 1;
-
         while(array[dir] > array[pivo]) {
             dir -= 1;
         }
